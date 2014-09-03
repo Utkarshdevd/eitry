@@ -7,7 +7,7 @@
 			echo "Failed to connect to MySQL: " . mysqli_connect_error() . "<br/>";
 			mysqli_close($con);
 		}
-		$sql = "INSERT INTO Filesdata (filename, filestatus) VALUES ('{$filename}','P')";
+		$sql = "INSERT INTO Filesdata (filename, filestatus, currentPos) VALUES ('{$filename}','P','origin')";
 		// Execute query
 		if (mysqli_query($con,$sql)) {
 			echo "Data inserted successfully <br/>";
