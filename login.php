@@ -1,5 +1,5 @@
 <?php
-	/*
+	
 	$DB_NAME = "eilabtry";
 	
 	//$con = mysqli_connect($DB_ADD, $DB_USER, $DB_PASS);
@@ -30,11 +30,25 @@
 	)";
 	// Execute query
 	if (mysqli_query($con,$sql)) {
-	  echo "Table persons created successfully <br/>";
+	  echo "Table Users created successfully <br/>";
 	} else {
 	  echo "Error creating table: " . mysqli_error($con);
 	}
-	*/
+	$sql = "CREATE TABLE IF NOT EXISTS Filesdata
+	(
+	PID INT NOT NULL AUTO_INCREMENT,
+	PRIMARY KEY(PID),
+	filename CHAR(15),
+	filestatus CHAR(15),
+	currentPos CHAR(15)
+	)";
+	// Execute query
+	if (mysqli_query($con,$sql)) {
+	  echo "Table Filesdata created successfully <br/>";
+	} else {
+	  echo "Error creating table: " . mysqli_error($con);
+	}
+	
 	/*
 	$sql = "INSERT INTO Users (username, password) VALUES ('aaa','bbbDE')";
 	// Execute query
@@ -44,6 +58,7 @@
 	  echo "Error inserting data: " . mysqli_error($con);
 	}
 	*/
+	/*
 	$con=mysqli_connect("localhost","root","qwerty","eilabtry");
 	if (mysqli_connect_error()){
 		echo "Failed to connect to MySQL: " . mysqli_connect_error() . "<br/>";
@@ -87,5 +102,6 @@
 	else{
 		echo "Bad user or pass" . $_POST['username'].$_POST['password']." <br/>";
 	}
+	*/
 	mysqli_close($con);
 ?>
