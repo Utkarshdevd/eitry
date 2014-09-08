@@ -1,11 +1,33 @@
 <html>
+<style>
+		.outer{
+		    width:100%;
+			border: none;	
+		    /* Firefox */
+		    display:-moz-box;
+		    -moz-box-pack:center;
+		    -moz-box-align:center;
+
+		    /* Safari and Chrome */
+		    display:-webkit-box;
+		    -webkit-box-pack:center;
+		    -webkit-box-align:center;
+
+		    /* W3C */
+		    display:box;
+		    box-pack:center;
+		    box-align:center;
+		}
+		form{
+			color: #A7C942;
+		}
+</style>
 	<body>
-		<fieldset style="width:30%;">
-			<form method="POST" action="other.php">
+			<h2 class="outer" style="color: #B7C942;">Login Page</h2>
+			<form class="outer" method="POST" action="other.php">
 				Username: <input type="text" name="username"><br>
 				Password: <input type="password" name="password"><br>
 				<input id="button" type="submit" name="submit" value="Log-In">
 			</form> 
-		</fieldset>
 	</body>
 </html>

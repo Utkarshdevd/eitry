@@ -21,10 +21,33 @@
 
 <html>
 	<body>
-		<fieldset style="width:30%;">
-			<form method="POST">
+<style>
+			.outer{
+			    width:100%;
+				border: none;	
+			    /* Firefox */
+			    display:-moz-box;
+			    -moz-box-pack:center;
+			    -moz-box-align:center;
+
+			    /* Safari and Chrome */
+			    display:-webkit-box;
+			    -webkit-box-pack:center;
+			    -webkit-box-align:center;
+
+			    /* W3C */
+			    display:box;
+			    box-pack:center;
+			    box-align:center;
+			}
+			form{
+				color:#A7C942;
+			}
+			</style>
+		<h2 class="outer" style="color: #B7C942;">Admin Logged In</h2>
+			<form class="outer" method="POST">
 				File Name: <input type="text" name="filename"><br>
-				<input id="button" type="submit" name="submits" value="Log-In">
+				<input id="button" type="submit" name="submits" value="Create File">
 			</form> 
 		</fieldset>
 	</body>

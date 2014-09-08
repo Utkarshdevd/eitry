@@ -1,0 +1,76 @@
+<html>
+	<style>
+		#myTable{
+			
+		}
+			table, td, th {
+		    	border-collapse: collapse;
+    			border: 1px solid green;
+    			padding: 5px;
+    		}
+
+			th {
+			    background-color: green;
+			    color: white;
+			}
+		.outer{
+		    width:100%;
+			border: none;	
+		    /* Firefox */
+		    display:-moz-box;
+		    -moz-box-pack:center;
+		    -moz-box-align:center;
+
+		    /* Safari and Chrome */
+		    display:-webkit-box;
+		    -webkit-box-pack:center;
+		    -webkit-box-align:center;
+
+		    /* W3C */
+		    display:box;
+		    box-pack:center;
+		    box-align:center;
+		}
+		#inner{
+		    width:50%;
+		}
+		form{
+			color: #A7C942;
+		}
+
+		.textbox { 
+		    -moz-border-radius-topright: 30px; 
+		    -webkit-border-top-right-radius: 30px; 
+		    border-top-right-radius: 30px; 
+		    -moz-border-radius-bottomright: 30px; 
+		    -webkit-border-bottom-right-radius: 30px; 
+		    border-bottom-right-radius: 30px; 
+		    border: 1px solid #848484; 
+		    outline:0; 
+		    height:25px; 
+		    width: 250px; 
+		    padding-right:10px; 
+		}
+	</style>
+	<script type="text/javascript" src="jquery-1.11.1.min.js"></script> 
+	<script type="text/javascript">
+    	$(document).ready(function(){
+    		$("#myTable").tablesorter();
+    	});
+    </script>
+	<body>
+		<h2 class="outer" style="color: #B7C942;">Officer Logged In</h2>
+		<div class="outer">
+
+			<form method="POST" action="">
+				<input class="textbox" type="text" name="searchFile" placeholder="Enter Filename to be searched"><br/>
+				<input style="margin-left:1%;" id="button" type="submit" name="file" value="Search File"><br/><br/>
+				<input class="textbox" type="text" name="searchDept" placeholder="Enter Department to be searched"><br/>
+				<input style="margin-left:1%;" id="button" type="submit" name="dept" value="Search Dept">
+			</form> 
+		</div>
+		<br/><br/>
+		
+		<script type="text/javascript" src="jquery.tablesorter.js"></script> 
+	</body>
+</html>
