@@ -38,8 +38,14 @@
 	(
 	PID INT NOT NULL AUTO_INCREMENT,
 	PRIMARY KEY(PID),
+	fileid CHAR(15),
 	filename CHAR(15),
-	filestatus CHAR(15),
+	filestatus CHAR(5),
+	branch CHAR(100),
+	activity CHAR(200),
+	date_time CHAR(15),
+	description TEXT(1500),
+	contact CHAR(15),
 	currentPos CHAR(15)
 	)";
 	// Execute query

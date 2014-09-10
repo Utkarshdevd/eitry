@@ -23,6 +23,7 @@
 		echo $_SESSION['username']."Login Success";
 		echo $row['username'] . " " . $row['password']." ".$row['designation'];
 		echo "<br>";
+		$_SESSION['log'] = "in";
 		if ($row['designation']=='A'){
 			echo "admin";
 			header("Location: adminPage.php");

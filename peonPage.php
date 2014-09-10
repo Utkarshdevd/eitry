@@ -1,6 +1,24 @@
 <?php
 	session_start();
 
+	//checking if a log SESSION VARIABLE has been set
+if( !isset($_SESSION['log']) || ($_SESSION['log'] != 'in') ){
+        //if the user is not allowed, display a message and a link to go back to login page
+	echo "You are not allowed. <a href='index.html'>back to login page</a>";
+        
+        //then abort the script
+	exit();
+}
+   ####  CODE FOR LOG OUT #### 
+if(isset($_GET['log']) && ($_GET['log']=='out')){
+        //if the user logged out, delete any SESSION variables
+	session_destroy();
+	
+        //then redirect to login page
+	header('location:index.html');
+}//end log out
+
+
 	$con=mysqli_connect("localhost","root","qwerty","eilabtry");
 	if (mysqli_connect_error()){
 		echo "Failed to connect to MySQL: " . mysqli_connect_error() . "<br/>";
@@ -111,5 +129,6 @@
 				}
 			?>
 		</div>
+		<p>{ <a href="?log=out">log out</a> }</p>
 	</body>
 </html>
